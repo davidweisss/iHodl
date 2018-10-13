@@ -1,5 +1,8 @@
 # iHodl
+
 Own and control the bitcoin you hodl like a champ.
+
+
 ![ihodl](https://user-images.githubusercontent.com/1084645/46902779-7e73c780-cecb-11e8-84c6-b250f6e13a66.jpeg)
 This device runs the Bitcoin Core software implementation of the Bitcoin protocol and uses it disconnected and offline to generate new-to-the-universe bitcoin keys: private key, and (deducible from private key) public key, aka bitcoin wallet address.
 
