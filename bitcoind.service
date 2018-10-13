@@ -1,5 +1,6 @@
 ## In /etc/systemd/system/bitcoind.service
-# iHodl: systemd unit for bitcoind
+## Enable with: sudo systemctl enable bitcoind.service
+# iHodl: systemd unit for bitcoind 
 # /etc/systemd/system/bitcoind.service
 
 [Unit]
