@@ -1,7 +1,6 @@
 # iHodl
 
-Own and control the bitcoin you hodl like a champ.
-
+Own and control the bitcoin you hodl like a champ. This is an alternative to Coinbase for example, that hold the key for you. 
 
 ![ihodl](https://user-images.githubusercontent.com/1084645/46902779-7e73c780-cecb-11e8-84c6-b250f6e13a66.jpeg)
 This device runs the Bitcoin Core software implementation of the Bitcoin protocol and uses it disconnected and offline to generate new-to-the-universe bitcoin keys: private key, and (deducible from private key) public key, aka bitcoin wallet address.
@@ -15,7 +14,10 @@ It runs on standard hardware:
 
 The cost of the parts less than $30.
 
-This is an alternative to Coinbase for example, that hold the key for you. In that case you don´t own the bitcoin and automatically endorse the risk of their hacking, loss, bankruptcy or government-mandated confiscation.
+## Code functionalities
+- Download bitcoin source, ... install, then disconnect
+- Create wallet and output key, then erase wallet and keys
+- Output to e-paper display
 
 ## Background
 Great feedback from Twitter friends on a simple, open, and cheap, do-it-yourself solution for bitcoin hodling where you exclusively own and control your own keys. [iHodl original design concept](https://twitter.com/davidweisss/status/1047489532130672640)
