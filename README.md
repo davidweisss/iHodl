@@ -16,7 +16,7 @@ It runs on standard hardware:
 - Waveshare 2.13inch e-Paper HAT https://www.waveshare.com/wiki/2.13inch_e-Paper_HAT
 - Kingston micro SD card to boot up the device (any will do, I have better results with those optimized to run apps on phones.)
 
-The cost of the parts less than $30.
+It is cheap: The cost of the parts less than $30.
 
 ## Code functionalities
 - Download bitcoin source, ... install, then disconnect
