@@ -13,6 +13,8 @@ It runs on standard hardware:
 - Waveshare 2.13inch e-Paper HAT https://www.waveshare.com/wiki/2.13inch_e-Paper_HAT
 - Kingston micro SD card to boot up the device (any will do, I have better results with those optimized to run apps on phones.)
 
+The cost of the parts less than $30.
+
 This is an alternative to Coinbase for example, that hold the key for you. In that case you don´t own the bitcoin and automatically endorse the risk of their hacking, loss, bankruptcy or government-mandated confiscation.
 
 ## Background
