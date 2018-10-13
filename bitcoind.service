@@ -1,0 +1,25 @@
+## In /etc/systemd/system/bitcoind.service
+# iHodl: systemd unit for bitcoind
+# /etc/systemd/system/bitcoind.service
+
+[Unit]
+Description=Bitcoin daemon
+Wants=getpublicip.service
+After=getpublicip.service
+
+[Service]
+ExecStartPre=/bin/sh -c 'sleep 30'
+ExecStart=/usr/local/bin/bitcoind -daemon -conf=/home/bitcoin/.bitcoin/bitcoin.conf -pid=/home/bitcoin/.bitcoin/bitcoind.pid
+PIDFile=/home/bitcoin/.bitcoin/bitcoind.pid
+User=bitcoin
+Group=bitcoin
+Type=forking
+KillMode=process
+Restart=always
+TimeoutSec=120
+RestartSec=30
+
+[Install]
+WantedBy=multi-user.target
+
+## https://github.com/Stadicus/guides/blob/master/raspibolt/raspibolt_30_bitcoin.md
