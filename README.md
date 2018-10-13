@@ -9,7 +9,7 @@ This device runs the Bitcoin Core software implementation of the Bitcoin protoco
 It runs on a standard linux distribution (Raspbian Lite, ie CLI / non-GUI).
 
 It runs on standard hardware:
-- Raspberry pi Zero
+- Raspberry pi Zero https://www.raspberrypi.org/products/raspberry-pi-zero/
 - Waveshare 2.13inch e-Paper HAT https://www.waveshare.com/wiki/2.13inch_e-Paper_HAT
 - Kingston micro SD card to boot up the device (any will do, I have better results with those optimized to run apps on phones.)
 
