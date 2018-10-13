@@ -8,9 +8,9 @@ It runs on a standard linux distribution (Rasbian Lite, ie CLI / non-GUI).
 It runs on standard hardware:
 - Raspberry pi Zero
 - Waveshare 2.13inch e-Paper HAT https://www.waveshare.com/wiki/2.13inch_e-Paper_HAT
-- Sandisk micro SD (any will do, I have better results with those optimized to run apps on phones.)
+- Kingston micro SD card to boot up the device (any will do, I have better results with those optimized to run apps on phones.)
 
-This is an alternative to Coibase for example, that hold the key for you. In that case you don´t own the bitcoin and automatically endorse the risk of their hacking, loss, bankruptcy or government-mandated confiscation.
+This is an alternative to Coinbase for example, that hold the key for you. In that case you don´t own the bitcoin and automatically endorse the risk of their hacking, loss, bankruptcy or government-mandated confiscation.
 
 ## background
 Great feedback from Twitter friends on a simple, open, and cheap, do-it-yourself solution for bitcoin hodling where you exclusively own and control your own keys. [iHodl original design concept](https://twitter.com/davidweisss/status/1047489532130672640)
