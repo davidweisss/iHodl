@@ -19,7 +19,9 @@ It runs on standard hardware:
 It is cheap: The cost of the parts less than $30.
 
 ## Code functionalities
+This repository contains instructions to create a disk image that will run embedded on the Rpi Zero.
 - Download bitcoin source, ... install, then disconnect
+- Launch bitcoin headless upon boot
 - Create wallet and output key, then erase wallet and keys
 - Output to e-paper display
 
