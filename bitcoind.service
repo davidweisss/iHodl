@@ -20,7 +20,12 @@ Restart=always
 TimeoutSec=120
 RestartSec=30
 
+## offline extra security options: http://0pointer.de/blog/projects/security.html
+PrivateNetwork=yes
+PrivateTmp=yes
+
 [Install]
 WantedBy=multi-user.target
+
 
 ## https://github.com/Stadicus/guides/blob/master/raspibolt/raspibolt_30_bitcoin.md
