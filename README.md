@@ -9,22 +9,22 @@ This is much safer alternative to Coinbase, for example, who hold the key for yo
 ![ihodl](https://user-images.githubusercontent.com/1084645/46902779-7e73c780-cecb-11e8-84c6-b250f6e13a66.jpeg)
 This device runs the Bitcoin Core software implementation of the Bitcoin protocol and uses it disconnected and offline to generate new-to-the-universe bitcoin keys: private key, and (deducible from private key) public key, aka bitcoin wallet address.
 
-It runs on a standard linux distribution (Raspbian Lite, ie CLI / non-GUI).
+Runs on a standard linux distribution (Raspbian Lite, ie CLI / non-GUI).
 
-It runs on standard hardware:
+Runs on standard hardware:
 - Raspberry pi Zero https://www.raspberrypi.org/products/raspberry-pi-zero/
 - Waveshare 2.13inch e-Paper HAT https://www.waveshare.com/wiki/2.13inch_e-Paper_HAT
 - Kingston micro SD card to boot up the device (any will do, I have better results with those optimized to run apps on phones.)
 - Almost any micro usb phone charger will power it, can run on batteries for extra security (against snooping on electrical lines.)
 
-It is cheap: The cost of the parts less than $30.
+Is cheap: The cost of the parts less than $30.
 
 ## Code functionalities
 This repository contains instructions to create a disk image that will run embedded on the Rpi Zero.
 - Download bitcoin source, ... install, then disconnect
 
 
-A series of inter-dependent systemd to:
+A series of inter-dependent systemd services to:
 - Erase e-paper display on power up
 - Launch bitcoind and create keys with bitcoin-cli
 - Output to e-paper display with manufacturer api and example code using python Image Manipulation Library.
