@@ -22,9 +22,12 @@ It is cheap: The cost of the parts less than $30.
 ## Code functionalities
 This repository contains instructions to create a disk image that will run embedded on the Rpi Zero.
 - Download bitcoin source, ... install, then disconnect
-- Launch bitcoin headless upon boot
-- Create wallet and output key, then erase wallet and keys
-- Output to e-paper display
+
+
+A series of inter-dependent systemd to:
+- Erase e-paper display on power up
+- Launch bitcoind and create keys with bitcoin-cli
+- Output to e-paper display with manufacturer api and example code using python Image Manipulation Library.
 
 ## Background
 Great feedback from Twitter friends on a simple, open, and cheap, do-it-yourself solution for bitcoin hodling where you exclusively own and control your own keys. [iHodl original design concept](https://twitter.com/davidweisss/status/1047489532130672640)
