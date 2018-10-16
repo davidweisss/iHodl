@@ -21,6 +21,7 @@ Is cheap: The cost of the parts less than $30.
 
 ## Code functionalities
 This repository contains instructions to create a disk image that will run embedded on the Rpi Zero.
+- Configure e-paper display
 - Download bitcoin source, ... install, then disconnect
 
 
