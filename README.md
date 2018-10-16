@@ -2,12 +2,10 @@
 
 Own and control the bitcoin you hodl like a champ.
 
-The creation of a bitcoin key offline, recording it, then erasing all computer traces guarantees only you will ever have that key. You can then make a hard copy, secure it (in a safe), then deposit bitcoin = your self-managed savings bank account.
-
-This is much safer alternative to Coinbase, for example, who hold the key for you. Much more secure than a hardware wallet. Much more secure than keeping gold in a nuclear-resistant bunker, in fact!
-
 ![ihodl](https://user-images.githubusercontent.com/1084645/46902779-7e73c780-cecb-11e8-84c6-b250f6e13a66.jpeg)
-This device runs the Bitcoin Core software implementation of the Bitcoin protocol and uses it disconnected and offline to generate new-to-the-universe bitcoin keys: private key, and (deducible from private key) public key, aka bitcoin wallet address.
+This device runs the Bitcoin Core software implementation of the Bitcoin protocol, which is the most secure software on the planet.
+
+It uses bitcoin disconnected and offline to generate new-to-the-universe bitcoin keys: private key, and (deducible from private key) public key, aka bitcoin wallet address.
 
 Runs on a standard linux distribution (Raspbian Lite, ie CLI / non-GUI).
 
@@ -21,13 +19,15 @@ Is cheap: The cost of the parts less than $30.
 
 ## Code functionalities
 This repository contains instructions to create a disk image that will run embedded on the Rpi Zero.
+- Configure e-paper display
 - Download bitcoin source, ... install, then disconnect
 
 
 A series of inter-dependent systemd services to:
 - Erase e-paper display on power up
 - Launch bitcoind and create keys with bitcoin-cli
-- Output to e-paper display with manufacturer api and example code using python Image Manipulation Library.
+- Output to e-paper display with manufacturer api and example code using python Image Manipulation Library
+- Destroy all files potentially containing keys (on power up and after recording on e-paper)
 
 ## Background
 Great feedback from Twitter friends on a simple, open, and cheap, do-it-yourself solution for bitcoin hodling where you exclusively own and control your own keys. [iHodl original design concept](https://twitter.com/davidweisss/status/1047489532130672640)
