@@ -27,7 +27,8 @@ This repository contains instructions to create a disk image that will run embed
 A series of inter-dependent systemd services to:
 - Erase e-paper display on power up
 - Launch bitcoind and create keys with bitcoin-cli
-- Output to e-paper display with manufacturer api and example code using python Image Manipulation Library.
+- Output to e-paper display with manufacturer api and example code using python Image Manipulation Library
+- Destroy all files potentially containing keys (on power up and after recording on e-paper)
 
 ## Background
 Great feedback from Twitter friends on a simple, open, and cheap, do-it-yourself solution for bitcoin hodling where you exclusively own and control your own keys. [iHodl original design concept](https://twitter.com/davidweisss/status/1047489532130672640)
