@@ -1,0 +1,9 @@
+[Unit]
+Description=Bitcoin daemon
+
+[Service]
+ExecStart=/home/pi/iHodl/eraseScreen.sh
+
+[Install]
+WantedBy=multi-user.target
+
