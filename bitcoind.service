@@ -5,15 +5,10 @@
 
 [Unit]
 Description=Bitcoin daemon
-Wants=getpublicip.service
-After=getpublicip.service
 
 [Service]
 ExecStartPre=/bin/sh -c 'sleep 30'
-ExecStart=/usr/local/bin/bitcoind -daemon -conf=/home/bitcoin/.bitcoin/bitcoin.conf -pid=/home/bitcoin/.bitcoin/bitcoind.pid
-PIDFile=/home/bitcoin/.bitcoin/bitcoind.pid
-User=bitcoin
-Group=bitcoin
+ExecStart=/usr/local/bin/bitcoind -daemon -conf=/home/pi/bitcoin.conf
 Type=forking
 KillMode=process
 Restart=always
