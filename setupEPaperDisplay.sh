@@ -34,3 +34,22 @@ sudo python setup.py install
 cd ..
 ## Run the following command to install the Python imaging library
 sudo apt-get install python-imaging -y
+
+## Configuring the interfaces
+## (Before running the API codes we provided, you should start up the corresponding core drivers of the interfaces. In the ready-to-use system image file, both I2C and SPI are set to Enable by default, but the serial port is still in the terminal debugging function mode.)
+
+## ## Enable the I2C function. Run the following command to configure your Raspberry Pi board:
+## sudo raspi-config
+## ## Select Advanced Options -> I2C -> yes, to start up the I2C core driver. Then you also need to modify the configuration file. Run the following command to open the configuration file:
+## sudo nano /etc/modules
+## ## Add the following two lines to the configuration file
+## i2c-bcm2708
+## i2c-dev
+## ## Press the keys Ctrl+X to exit, and input Y to save the settings. Then, reboot the module to make the settings take effect.
+## ## Enable the serial function. The serial port of RPi is set to serial terminal debugging function mode by default. If you want the serial port services as a common IO, you should modify the settings on the RPi. When the terminal debugging function is disabled, you cannot access RPi board via the serial port any more. If you want to control the RPi, you may need to enable the debugging function of the serial port again.
+## sudo raspi-config
+## ## Select Advanced Options -> Serial. Select the option no can disable the serial debugging function. And then, the serial port can be used for serial communication. And select the option yes can enable the serial debugging function. You should reboot the module to make the settings take effect.
+## ## Note: the serial port on Raspberry Pi 3 Model B is unusable, because Pin 14 and Pin 15 is connected to the on-board Bluetooth model.
+## ## Start up the spi function, run the following command:
+## sudo raspi-config
+## ## Select Advanced Options -> I2C -> yes, to start up I2C core driver.
