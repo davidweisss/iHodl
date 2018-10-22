@@ -2,7 +2,6 @@
 ## Launch without internet connection, blocks are not synched [3]
 ## Dev: screen
 ## bitcoind -connect=0 -nolisten 
-bitcoind -connect=0 -nolisten -daemon 
 ##
 
 ## Create new screen tab C^a-C^c

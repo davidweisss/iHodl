@@ -1,8 +1,10 @@
 [Unit]
-Description=Bitcoin daemon
+Description=Erase epaper screen
 
 [Service]
 ExecStart=/home/pi/iHodl/eraseScreen.sh
+User=pi
+Group=pi
 
 [Install]
 WantedBy=multi-user.target

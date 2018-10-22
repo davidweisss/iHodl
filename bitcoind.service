@@ -1,21 +1,24 @@
 ## In /etc/systemd/system/bitcoind.service
+## Enable with: sudo systemctl enable bitcoind.service
+# iHodl: systemd unit for bitcoind 
+# /etc/systemd/system/bitcoind.service
 
 [Unit]
 Description=Bitcoin daemon
 
 [Service]
 ExecStartPre=/bin/sh -c 'sleep 30'
-ExecStart=/usr/local/bin/bitcoind -daemon -conf=/home/pi/iHodl/bitcoin.conf 
+ExecStart=/usr/local/bin/bitcoind -connect=0 -nolisten -daemon
 Type=forking
 KillMode=process
 Restart=always
 TimeoutSec=120
 RestartSec=30
-
-## offline extra security options: http://0pointer.de/blog/projects/security.html
-
-## PrivateNetwork=yes
-## PrivateTmp=yes
+User=pi
+Group=pi
 
 [Install]
 WantedBy=multi-user.target
+
+
+## https://github.com/Stadicus/guides/blob/master/raspibolt/raspibolt_30_bitcoin.md
