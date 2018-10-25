@@ -5,7 +5,7 @@ Description=Erase epaper screen
 ExecStart=/home/pi/iHodl/eraseScreen.sh
 User=pi
 Group=pi
-
+WorkingDirectory=/home/pi/iHodl/
 [Install]
 WantedBy=multi-user.target
 

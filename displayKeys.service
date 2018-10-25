@@ -1,0 +1,14 @@
+[Unit]
+Description=Display bitcoin keys on epaper display
+After=createKeys.service
+After=eraseScreen.service
+
+[Service]
+User=pi
+Group=pi
+ExecStart=/home/pi/iHodl/displayKeys.sh
+
+[Install]
+WantedBy=multi-user.target
+Requires=createKeys.service
+Requires=eraseScreen.service

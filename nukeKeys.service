@@ -1,0 +1,9 @@
+[Unit]
+Description=Nuke keys after output to epaper display
+After=displayKeys.service
+
+[Service]
+ExecStart=/bin/rm /home/pi/iHodl/keys.txt
+
+[Install]
+WantedBy=multi-user.target

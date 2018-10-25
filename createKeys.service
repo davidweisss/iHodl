@@ -1,0 +1,12 @@
+[Unit]
+Description=Create bitcoin keys
+After=bitcoind.service
+
+
+[Service]
+User=pi
+Group=pi
+ExecStart=/home/pi/iHodl/createKeys.sh
+
+[Install]
+WantedBy=multi-user.target
