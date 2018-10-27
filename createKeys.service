@@ -5,8 +5,8 @@ After=bitcoind.service
 
 [Service]
 User=pi
-ExecStartPre=/bin/sleep 10
 ExecStart=/home/pi/iHodl/createKeys.sh
+ExecStartPost=/bin/sleep 1
 
 [Install]
 WantedBy=multi-user.target

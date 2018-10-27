@@ -3,9 +3,8 @@ Description=Nuke keys after output to epaper display
 After=displayKeys.service
 
 [Service]
-ExecStart=/bin/rm /home/pi/iHodl/keys.txt
+ExecStart=/home/pi/iHodl/nukeKeys.sh
 User=pi
-ExecStartPre=/bin/sleep 5
 
 
 

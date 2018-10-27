@@ -18,16 +18,22 @@ color = 0
 police = '/usr/share/fonts/truetype/liberation/LiberationSerif-Regular.ttf'
 big = ImageFont.truetype(police, 60)
 medium = ImageFont.truetype(police, 25)
-small = ImageFont.truetype(police, 15)
-tiny= ImageFont.truetype(police, 13)
+small = ImageFont.truetype(police, 14)
+tiny= ImageFont.truetype(police, 12)
 # Generation de l'image a afficher
-draw.text((13, 3), 'Bitcoin public key', font = tiny, fill = 0)
-draw.text((10, 21), '3J98t1WpEZ73CNmQviecrnyiW', font = small, fill = 0)
-draw.text((10, 38), 'rnqRhWNL', font = small, fill = 0)
 
+with open('/home/pi/iHodl/public') as f:
+            lines = f.read().splitlines()
+            
+draw.text((13, 3), 'Bitcoin public key', font = tiny, fill = 0)
+draw.text((10, 21), lines[0], font = small, fill = 0)
+draw.text((10, 38), lines[1], font = small, fill = 0)
+
+with open('/home/pi/iHodl/private') as f:
+            lines = f.read().splitlines()
 draw.text((13, 63), 'Corresponding bitcoin private key', font = tiny, fill = 0)
-draw.text((10, 81), '5Kb8kLf9zgWQnogidDA76MzPL', font = small, fill = 0)
-draw.text((10, 98), '6TsZZY36hWXMssSzNydYXYB9K', font = small, fill = 0)
+draw.text((10, 81), lines[0], font = small, fill = 0)
+draw.text((10, 98), lines[1], font = small, fill = 0)
 # Sauvegarde de l'image et rotation
 image.save('image.jpg')
 rotate = Image.open('image.jpg')

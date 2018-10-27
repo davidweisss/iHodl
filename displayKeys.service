@@ -6,7 +6,7 @@ After=processKeys.service
 User=pi
 Group=pi
 ExecStart=/home/pi/iHodl/displayKeys.sh
-ExecStartPre=/bin/sleep 1
+ExecStartPost=/bin/sleep 10
 
 [Install]
 WantedBy=multi-user.target

@@ -3,6 +3,7 @@ Description=Bitcoin daemon
 
 [Service]
 User=pi
+ExecStartPost=/bin/sleep 10
 ExecStart=/usr/local/bin/bitcoind 
 Type=forking
 KillMode=process
