@@ -4,6 +4,11 @@ After=displayKeys.service
 
 [Service]
 ExecStart=/bin/rm /home/pi/iHodl/keys.txt
+User=pi
+ExecStartPre=/bin/sleep 5
+
+
+
 
 [Install]
 WantedBy=multi-user.target

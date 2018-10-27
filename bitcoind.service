@@ -3,8 +3,7 @@ Description=Bitcoin daemon
 
 [Service]
 User=pi
-Group=pi
-ExecStart=/usr/local/bin/bitcoind -connect=0 -nolisten -daemon -conf=/home/pi/iHodl/bitcoin.conf
+ExecStart=/usr/local/bin/bitcoind 
 Type=forking
 KillMode=process
 Restart=always

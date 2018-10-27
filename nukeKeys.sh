@@ -1,2 +1,4 @@
-f="/home/pi/iHodl/keys.txt"
-rm $f
+d="/home/pi/iHodl/"
+rm ${d}keys.txt
+rm ${d}private
+rm ${d}public

@@ -15,7 +15,7 @@ image = Image.new('1', (255, 128), 255)
 draw = ImageDraw.Draw(image)
 # Gestion Police
 color = 0
-police = '/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf'
+police = '/usr/share/fonts/truetype/liberation/LiberationSerif-Regular.ttf'
 big = ImageFont.truetype(police, 60)
 medium = ImageFont.truetype(police, 25)
 small = ImageFont.truetype(police, 15)
