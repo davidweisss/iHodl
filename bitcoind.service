@@ -3,13 +3,10 @@ Description=Bitcoin daemon
 
 [Service]
 User=pi
-ExecStartPost=/bin/sleep 10
-ExecStart=/usr/local/bin/bitcoind 
+ExecStartPost=/bin/sleep 15
+ExecStart=/usr/local/bin/bitcoind -listen=0 -connect=0 -server=1 -daemon -keypool=1
+
 Type=forking
-KillMode=process
-Restart=always
-TimeoutSec=120
-RestartSec=30
 
 [Install]
 WantedBy=multi-user.target

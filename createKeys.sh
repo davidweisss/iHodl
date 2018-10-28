@@ -9,7 +9,7 @@ newAddress=`bitcoin-cli getnewaddress`
 privateKey=`bitcoin-cli dumpprivkey $newAddress` 
 echo $newAddress >> $f
 echo $privateKey >> $f
-cp $f ${f}.carefulThisWasCreatedInDebugMode
+## cp $f ${f}.carefulThisWasCreatedInDebugMode
 
 
 ## If you want to create a custom address

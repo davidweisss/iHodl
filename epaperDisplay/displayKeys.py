@@ -7,21 +7,17 @@ from PIL import ImageFont
 epd = epd2in13.EPD()
 epd.init(epd.lut_full_update)
 epd.clear_frame_memory(0xFF)
- # Affichage d'une image noire pour "nettoyer" l'ecran
-image = Image.new('1', (255, 128), 0)
-epd.set_frame_memory(image, 0, 0)
-epd.display_frame()
-image = Image.new('1', (255, 128), 255)
-draw = ImageDraw.Draw(image)
-# Gestion Police
+# Font
 color = 0
 police = '/usr/share/fonts/truetype/liberation/LiberationSerif-Regular.ttf'
 big = ImageFont.truetype(police, 60)
 medium = ImageFont.truetype(police, 25)
 small = ImageFont.truetype(police, 14)
 tiny= ImageFont.truetype(police, 12)
-# Generation de l'image a afficher
 
+# Generation de l'image a afficher
+image = Image.new('1', (255, 128), 1)
+draw= ImageDraw.Draw(image)
 with open('/home/pi/iHodl/public') as f:
             lines = f.read().splitlines()
             

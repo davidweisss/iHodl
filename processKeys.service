@@ -1,0 +1,12 @@
+[Unit]
+Description=prepare keys for output: eg newlines, other formats
+After=createKeys.service
+
+
+[Service]
+User=pi
+ExecStart=/home/pi/iHodl/processKeys.sh
+ExecStartPost=/bin/sleep 1
+
+[Install]
+WantedBy=multi-user.target
