@@ -1,92 +1,15 @@
 
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-import json
-import requests
 import epd2in13
 import time
 from PIL import Image
 from PIL import ImageDraw
 from PIL import ImageFont
 
-# Valeurs des Cryptomonnaies
-ETHBAL = float(1)
-BTCBAL = float(0.55)
-# Investissement initial (euros)
-BASE = float(2700)
-
-def connection_check():
-    try:
-        requests.get("http://google.com", timeout=3)
-        return True
-    except requests.ConnectionError:
-        pass
-
-    return False
-
-def main():
     # Initialisation de l'afficheur
     epd = epd2in13.EPD()
-    epd.init(epd.lut_full_update)
-    epd.clear_frame_memory(0xFF)
-    # Affichage d'une image noire pour "nettoyer" l'ecran
-    image = Image.open('/opt/coin-ticker/start.bmp')
-    epd.set_frame_memory(image, 0, 0)
-    epd.display_frame()
-
-    while True:
-        # API call ETH value 
-        gETH = requests.get('https://api.coinmarketcap.com/v1/ticker/ethereum/?convert=EUR')
-        if gETH.status_code == 200:
-            ETH = json.loads(gETH.text)
-        else:
-            ETH = 0
-        gBTC = requests.get('https://api.coinmarketcap.com/v1/ticker/bitcoin/?convert=EUR')
-        if gBTC.status_code == 200:
-            BTC = json.loads(gBTC.text)
-        else: 
-            BTC = 0
-        gBLK = requests.get('https://blockchain.info/fr/q/getblockcount')
-        if gBLK.status_code == 200:
-            BTCBLK = gBLK.text
-        else:
-            BTCBLK = 0  
-
-        # Check si la connexion internet est fonctionnelle
-        if connection_check():
-            WAN = 'OK'
-        else:
-            WAN = 'FAIL'
-        
-        # Traitements et calculs des valeurs 
-        # ETHEREUM
-        ETH_PRICE_NOW = float(ETH[0]['price_eur'])
-        ETH_PRICE_1H = ETH_PRICE_NOW - ((float(ETH[0]['percent_change_1h']) / 100) * ETH_PRICE_NOW)
-        ETH_PRICE_24H = ETH_PRICE_NOW - ((float(ETH[0]['percent_change_24h']) / 100) * ETH_PRICE_NOW)
-        ETH_PRICE_7D = ETH_PRICE_NOW - ((float(ETH[0]['percent_change_7d']) / 100) * ETH_PRICE_NOW)
-        ETH_EUR_NOW = ETHBAL * ETH_PRICE_NOW
-        ETH_EUR_1H = ETHBAL * ETH_PRICE_1H
-        ETH_EUR_24H = ETHBAL * ETH_PRICE_24H
-        ETH_EUR_7D = ETHBAL * ETH_PRICE_7D
-        # BITCOIN
-        BTC_PRICE_NOW = float(BTC[0]['price_eur'])
-        BTC_PRICE_1H = BTC_PRICE_NOW - ((float(BTC[0]['percent_change_1h']) / 100) * BTC_PRICE_NOW)
-        BTC_PRICE_24H = BTC_PRICE_NOW - ((float(BTC[0]['percent_change_24h']) / 100) * BTC_PRICE_NOW)
-        BTC_PRICE_7D = BTC_PRICE_NOW - ((float(BTC[0]['percent_change_7d']) / 100) * BTC_PRICE_NOW)
-        BTC_EUR_NOW = BTCBAL * BTC_PRICE_NOW
-        BTC_EUR_1H = BTCBAL * BTC_PRICE_1H
-        BTC_EUR_24H = BTCBAL * BTC_PRICE_24H
-        BTC_EUR_7D = BTCBAL * BTC_PRICE_7D
-        # TOTAL EUR
-        TOTALEUR_NOW = ETH_EUR_NOW + BTC_EUR_NOW
-        TOTALEUR_1H = ETH_EUR_1H + BTC_EUR_1H
-        TOTALEUR_24H = ETH_EUR_24H + BTC_EUR_24H
-        TOTALEUR_7D = ETH_EUR_7D + BTC_EUR_7D
-        # TOTAL PERCENT VARIATION
-        PERCENT_TOTAL_NOW_FROM_BASE = (TOTALEUR_NOW - BASE) / BASE * 100
-        PERCENT_TOTAL_NOW_FROM_1H = (TOTALEUR_NOW - TOTALEUR_1H) / TOTALEUR_1H * 100
-        PERCENT_TOTAL_NOW_FROM_24H = (TOTALEUR_NOW - TOTALEUR_24H) / TOTALEUR_24H * 100
-        PERCENT_TOTAL_NOW_FROM_7D = (TOTALEUR_NOW - TOTALEUR_7D) / TOTALEUR_7D * 100
+ 
         # Initialisation Afficheur (mode partial update)
         epd.init(epd.lut_partial_update)
         image = Image.new('1', (255, 128), 255)
