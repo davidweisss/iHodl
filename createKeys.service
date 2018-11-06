@@ -1,6 +1,6 @@
 [Unit]
 Description=Create bitcoin keys
-After=bitcoind.service
+After=eraseScreen.service
 
 
 [Service]

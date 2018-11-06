@@ -1,8 +1,10 @@
 [Unit]
 Description=Erase epaper screen
+After=bitcoind.service
 
 [Service]
 ExecStart=/home/pi/iHodl/eraseScreen.sh
+ExecStartPost=/bin/sleep 10
 User=pi
 Group=pi
 WorkingDirectory=/home/pi/iHodl/
